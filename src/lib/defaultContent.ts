@@ -55,6 +55,7 @@ export const defaultContent: SiteContent = {
       title: "Antillean Manatee Conservation",
       year: "2026",
       note: "more to come",
+      attachment: { kind: "image", url: "/seed/manatee.jpg", label: "Antillean manatee" },
     },
   ],
   resume: {
