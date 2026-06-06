@@ -42,7 +42,7 @@ export default function FunFactsWindow() {
           </p>
           <p className={`hand ${styles.blurb}`}>
             Perfect read for any learner, no math skills required! Yates makes
-            you rethink your day to day and realize that math is EVERYWHERE
+            you rethink your day to day and realize that math is everywhere
           </p>
         </div>
       </section>
