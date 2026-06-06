@@ -24,3 +24,8 @@ Create a `.env.local` with:
 ADMIN_PASSWORD=
 SESSION_SECRET=
 ```
+
+---
+
+Made by [Andrew Samountry](https://github.com/AndSam321) 💙
+
