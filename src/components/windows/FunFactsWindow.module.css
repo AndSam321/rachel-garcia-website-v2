@@ -1,0 +1,124 @@
+.funFacts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--olive-deep);
+  border-bottom: 2px solid var(--olive);
+  width: fit-content;
+  padding-right: 16px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.caption {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--brown);
+}
+
+.author {
+  color: var(--tan);
+}
+
+.vinyl {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #3a3a3a, #1a1a1a 55%, #000);
+  box-shadow: 2px 4px 10px rgba(31, 33, 36, 0.4);
+}
+
+.vinyl:hover {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.groove,
+.grooveInner {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.groove {
+  inset: 8px;
+}
+
+.grooveInner {
+  inset: 16px;
+}
+
+.vinylLabel {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1a1a1a;
+}
+
+.vinylHole {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid #000;
+}
+
+.book {
+  width: 92px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 2px 4px 10px rgba(31, 33, 36, 0.3);
+  transform: rotate(-1.5deg);
+}
+
+.hobbyPhoto {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--olive);
+  box-shadow: 2px 4px 10px rgba(31, 33, 36, 0.3);
+}
+
+.hobbies {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  font-size: 1.35rem;
+  color: var(--blue-slate);
+}
+
+.hobbies li::before {
+  content: "✦ ";
+  color: var(--tan);
+}

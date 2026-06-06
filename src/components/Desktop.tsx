@@ -8,15 +8,17 @@ import Window from "./Window";
 import ContactWindow from "./windows/ContactWindow";
 import ProjectsWindow from "./windows/ProjectsWindow";
 import ResumeWindow from "./windows/ResumeWindow";
+import FunFactsWindow from "./windows/FunFactsWindow";
 import styles from "./Desktop.module.css";
 import type { SiteContent } from "@/types";
 
-export type WindowId = "contact" | "projects" | "resume";
+export type WindowId = "contact" | "projects" | "resume" | "funfacts";
 
 const WINDOW_META: Record<WindowId, { title: string; initialPosition: { x: number; y: number } }> = {
   contact: { title: "Contacts", initialPosition: { x: 80, y: 90 } },
   projects: { title: "Projects", initialPosition: { x: 200, y: 60 } },
   resume: { title: "Resume", initialPosition: { x: 320, y: 110 } },
+  funfacts: { title: "Fun Facts", initialPosition: { x: 440, y: 140 } },
 };
 
 export default function Desktop({ content }: { content: SiteContent }) {
@@ -67,6 +69,9 @@ export default function Desktop({ content }: { content: SiteContent }) {
         <div className={styles.folderResume}>
           <FolderIcon label="Resume" onOpen={() => openWindow("resume")} />
         </div>
+        <div className={styles.folderFunFacts}>
+          <FolderIcon label="Fun Facts" onOpen={() => openWindow("funfacts")} />
+        </div>
       </div>
 
       {openWindows.map((id) => (
@@ -81,6 +86,7 @@ export default function Desktop({ content }: { content: SiteContent }) {
           {id === "contact" && <ContactWindow contacts={content.contacts} />}
           {id === "projects" && <ProjectsWindow projects={content.projects} />}
           {id === "resume" && <ResumeWindow resume={content.resume} />}
+          {id === "funfacts" && <FunFactsWindow />}
         </Window>
       ))}
 

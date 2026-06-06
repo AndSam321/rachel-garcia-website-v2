@@ -52,24 +52,31 @@
 
 .folderContact,
 .folderProjects,
-.folderResume {
+.folderResume,
+.folderFunFacts {
   position: absolute;
 }
 
 .folderContact {
-  left: 8%;
+  left: 6%;
   top: 0;
   transform: rotate(-3deg);
 }
 
 .folderProjects {
-  left: 44%;
+  left: 32%;
   top: 50px;
   transform: rotate(2deg);
 }
 
+.folderFunFacts {
+  left: 58%;
+  top: 10px;
+  transform: rotate(-2deg);
+}
+
 .folderResume {
-  right: 10%;
+  right: 8%;
   top: -10px;
   transform: rotate(3deg);
 }
@@ -135,7 +142,8 @@
 
   .folderContact,
   .folderProjects,
-  .folderResume {
+  .folderResume,
+  .folderFunFacts {
     position: static;
   }
 
