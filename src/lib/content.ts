@@ -5,7 +5,9 @@ import { defaultContent } from "./defaultContent";
 const CONTENT_KEY = "content.json";
 
 export async function getContent(): Promise<SiteContent> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN) return defaultContent;
+  if (!process.env.BLOB_READ_WRITE_TOKEN && !process.env.BLOB_STORE_ID) {
+    return defaultContent;
+  }
   try {
     const { blobs } = await list({ prefix: CONTENT_KEY, limit: 1 });
     if (blobs.length === 0) return defaultContent;
