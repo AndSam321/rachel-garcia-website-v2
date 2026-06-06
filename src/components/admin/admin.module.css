@@ -1,0 +1,173 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pageTitle {
+  font-size: 2.2rem;
+  color: var(--blue-slate);
+}
+
+.topActions {
+  display: flex;
+  gap: 10px;
+}
+
+.flash {
+  font-size: 1.3rem;
+  color: var(--olive-deep);
+}
+
+.flashError {
+  font-size: 1.3rem;
+  color: var(--brown);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  border: 2px solid var(--sage-mist);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.7rem;
+  color: var(--olive-deep);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--tan);
+}
+
+.page input,
+.page textarea {
+  font-family: var(--font-marker);
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border: 2px solid var(--sage-mist);
+  border-radius: 6px;
+  background: var(--paper);
+  width: 100%;
+}
+
+.page input:focus,
+.page textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rowKind {
+  width: 80px;
+  font-size: 0.85rem;
+  color: var(--tan);
+  flex-shrink: 0;
+}
+
+.grow {
+  flex: 1;
+  min-width: 180px;
+}
+
+.year {
+  width: 90px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px dashed var(--blue-light);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.subCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 3px solid var(--sage-mist);
+  padding-left: 12px;
+}
+
+.sectionHeading {
+  font-weight: 600;
+}
+
+.primary,
+.secondary,
+.danger,
+.upload {
+  font-family: var(--font-marker);
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 2px solid;
+  width: fit-content;
+}
+
+.primary {
+  background: var(--olive);
+  border-color: var(--olive-deep);
+  color: var(--ink);
+}
+
+.primary:hover {
+  background: var(--olive-deep);
+  color: var(--paper);
+}
+
+.secondary {
+  background: var(--paper);
+  border-color: var(--blue-slate);
+  color: var(--blue-slate);
+}
+
+.secondary:hover {
+  background: rgba(159, 181, 206, 0.3);
+}
+
+.danger {
+  background: none;
+  border-color: transparent;
+  color: var(--brown);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 2px 4px;
+}
+
+.upload {
+  background: rgba(159, 181, 206, 0.3);
+  border-color: var(--blue-slate);
+  color: var(--blue-slate);
+  cursor: pointer;
+}
+
+.uploadError {
+  color: var(--brown);
+}
