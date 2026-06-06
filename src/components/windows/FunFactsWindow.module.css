@@ -31,6 +31,13 @@
   color: var(--tan);
 }
 
+.blurb {
+  margin-top: 8px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: var(--green);
+}
+
 .vinyl {
   position: relative;
   display: block;

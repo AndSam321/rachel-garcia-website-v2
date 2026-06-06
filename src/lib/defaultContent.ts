@@ -16,7 +16,7 @@ export const defaultContent: SiteContent = {
     {
       id: "substack",
       kind: "substack",
-      label: "Rachel Gone Global",
+      label: "Rachel Gone Global - My personal blog!",
       href: "https://substack.com/@rachelmgarcia?r=61pi0g&utm_campaign=profile&utm_medium=profile-page",
     },
     {

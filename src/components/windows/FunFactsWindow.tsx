@@ -40,6 +40,10 @@ export default function FunFactsWindow() {
             The Math of Life and Death: 7 Mathematical Principles That Shape Our
             Lives <span className={styles.author}>by Kit Yates</span>
           </p>
+          <p className={`hand ${styles.blurb}`}>
+            Perfect read for any learner, no math skills required! Yates makes
+            you rethink your day to day and realize that math is EVERYWHERE
+          </p>
         </div>
       </section>
 
