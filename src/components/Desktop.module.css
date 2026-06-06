@@ -98,6 +98,28 @@
   color: var(--brown);
 }
 
+.credit {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.credit a {
+  font-family: var(--font-marker);
+  font-size: 0.75rem;
+  color: var(--tan);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 768px) {
   .hero {
     margin-top: 4vh;

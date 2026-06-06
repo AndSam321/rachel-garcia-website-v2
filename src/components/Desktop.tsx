@@ -95,6 +95,12 @@ export default function Desktop({ content }: { content: SiteContent }) {
         />
         <figcaption className={`hand ${styles.polaroidCaption}`}>me!</figcaption>
       </figure>
+
+      <footer className={styles.credit}>
+        <a href="https://github.com/AndSam321" target="_blank" rel="noopener noreferrer">
+          made by Andrew Samountry
+        </a>
+      </footer>
     </main>
   );
 }
