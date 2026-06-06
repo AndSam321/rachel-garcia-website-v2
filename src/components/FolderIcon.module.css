@@ -21,6 +21,17 @@
   filter: drop-shadow(1px 2px 2px rgba(31, 33, 36, 0.2));
 }
 
+@media (min-width: 769px) {
+  .icon {
+    width: 100px;
+    height: 75px;
+  }
+
+  .label {
+    font-size: 1.25rem;
+  }
+}
+
 .label {
   font-family: var(--font-marker);
   font-size: 1.05rem;

@@ -88,8 +88,8 @@ export default function Desktop({ content }: { content: SiteContent }) {
         <Image
           src="/seed/headshot.jpg"
           alt="Rachel Garcia"
-          width={180}
-          height={120}
+          width={480}
+          height={320}
           className={styles.polaroidImg}
           priority
         />
