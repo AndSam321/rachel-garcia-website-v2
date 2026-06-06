@@ -60,9 +60,6 @@ export default function Desktop({ content }: { content: SiteContent }) {
       </section>
 
       <div className={styles.folders}>
-        <div className={styles.folderContact}>
-          <FolderIcon label="Contact Me" onOpen={() => openWindow("contact")} />
-        </div>
         <div className={styles.folderProjects}>
           <FolderIcon label="Projects" onOpen={() => openWindow("projects")} />
         </div>
@@ -71,6 +68,9 @@ export default function Desktop({ content }: { content: SiteContent }) {
         </div>
         <div className={styles.folderFunFacts}>
           <FolderIcon label="Fun Facts" onOpen={() => openWindow("funfacts")} />
+        </div>
+        <div className={styles.folderContact}>
+          <FolderIcon label="Contact Me" onOpen={() => openWindow("contact")} />
         </div>
       </div>
 

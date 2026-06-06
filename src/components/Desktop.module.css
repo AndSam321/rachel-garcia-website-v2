@@ -57,13 +57,13 @@
   position: absolute;
 }
 
-.folderContact {
+.folderProjects {
   left: 6%;
   top: 0;
   transform: rotate(-3deg);
 }
 
-.folderProjects {
+.folderResume {
   left: 32%;
   top: 50px;
   transform: rotate(2deg);
@@ -75,7 +75,7 @@
   transform: rotate(-2deg);
 }
 
-.folderResume {
+.folderContact {
   right: 8%;
   top: -10px;
   transform: rotate(3deg);
