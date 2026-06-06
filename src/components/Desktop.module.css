@@ -142,7 +142,7 @@
   .polaroid {
     position: static;
     width: fit-content;
-    margin: 32px auto 0;
+    margin: 20px auto 48px;
   }
 
   .polaroidImg {
