@@ -1,4 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import type { Contact, ContactKind } from "@/types";
+import { decodeEmail } from "@/lib/emailObfuscation";
 import styles from "./ContactWindow.module.css";
 
 const ICONS: Record<ContactKind, { color: string; icon: React.ReactNode }> = {
@@ -38,22 +42,40 @@ const ICONS: Record<ContactKind, { color: string; icon: React.ReactNode }> = {
 };
 
 export default function ContactWindow({ contacts }: { contacts: Contact[] }) {
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => setRevealed(true), []);
+
   return (
     <ul className={styles.list}>
-      {contacts.map((c) => (
-        <li key={c.id}>
-          <a
-            className={styles.row}
-            href={c.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: ICONS[c.kind].color }}
-          >
-            <span className={styles.icon}>{ICONS[c.kind].icon}</span>
-            <span className={`hand ${styles.label}`}>{c.label}</span>
-          </a>
-        </li>
-      ))}
+      {contacts.map((c) => {
+        const isHiddenEmail = c.kind === "email" && !revealed;
+        const label = isHiddenEmail ? "Email Rachel" : decode(c);
+        const href = isHiddenEmail ? undefined : link(c);
+
+        return (
+          <li key={c.id}>
+            <a
+              className={styles.row}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: ICONS[c.kind].color }}
+            >
+              <span className={styles.icon}>{ICONS[c.kind].icon}</span>
+              <span className={`hand ${styles.label}`}>{label}</span>
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
+}
+
+function decode(c: Contact): string {
+  return c.kind === "email" ? decodeEmail(c.label) : c.label;
+}
+
+function link(c: Contact): string {
+  return c.kind === "email" ? `mailto:${decodeEmail(c.href)}` : c.href;
 }
